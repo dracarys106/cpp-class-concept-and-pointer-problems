@@ -263,10 +263,14 @@ typedef struct S1 {
 void f1(t s);     // call by value
 void f2(t *p);    // call by address
 ```
+## 19. `sizeof` on Array vs Pointer
 
-### Concept
+```c
+char *str[] = {"Yoga","Do","Not","Die","Speak"};
+```
 
-* Passing structure by pointer avoids copying
-* Efficient for large structures
+* `sizeof(str)` → 5 × pointer size
+* `sizeof(str[0])` → pointer size
 
 ---
+
